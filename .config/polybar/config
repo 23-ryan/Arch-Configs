@@ -372,7 +372,7 @@ font-4 = "Font Awesome 6 Brands:pixelsize=8;1"
 
 modules-left = i3
 modules-center =
-modules-right = networkspeedup networkspeeddown memory2 cpu2 backlight volume date
+modules-right = networkspeedup networkspeeddown memory2 cpu2 backlight volume bluetooth date
 
 separator = 
 ;dim-value = 1.0
@@ -1534,6 +1534,15 @@ bar-empty-font = 2
 bar-empty-foreground = #fff
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
+
+[module/bluetooth]
+type = custom/script
+exec = /home/aryan/.scripts/bluetooth.sh
+interval = 1
+click-left = exec /home/aryan/.scripts/toggle_bluetooth.sh
+format-padding = 2
+format-background = #000000
+format-foreground = #ffffff
 
 [module/xkeyboard]
 ;https://github.com/jaagr/polybar/wiki/Module:-xkeyboard
